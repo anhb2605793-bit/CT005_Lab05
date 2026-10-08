@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Trang trình bày infographic Canva và video YouTube.">
-  <title>Infographic và video</title>
+  <meta name="description" content="Trang giới thiệu thông tin cá nhân, tài liệu, sản phẩm và video của Trần Thị Kim Anh.">
+  <title>Thông tin cá nhân - Trần Thị Kim Anh</title>
   <style>
     :root {
       color-scheme: light;
@@ -40,6 +40,17 @@
       line-height: 1.6;
     }
 
+    .student-id {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.45rem 0.85rem;
+      color: #fff;
+      background: rgb(255 255 255 / 15%);
+      border: 1px solid rgb(255 255 255 / 30%);
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
     main {
       width: min(100% - 2rem, 960px);
       margin: 2rem auto 3rem;
@@ -60,6 +71,31 @@
       font-size: 1.4rem;
     }
 
+    .profile {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+      gap: 1rem;
+      margin: 0;
+    }
+
+    .profile div {
+      padding: 1rem;
+      background: #f8faff;
+      border: 1px solid #e5eaf3;
+      border-radius: 0.65rem;
+    }
+
+    .profile dt {
+      margin-bottom: 0.35rem;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .profile dd {
+      margin: 0;
+      font-weight: 600;
+    }
+
     .embed {
       position: relative;
       width: 100%;
@@ -72,6 +108,10 @@
       aspect-ratio: 16 / 9;
     }
 
+    .document {
+      height: clamp(32rem, 75vh, 56rem);
+    }
+
     .video {
       aspect-ratio: 16 / 9;
     }
@@ -82,6 +122,16 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .product-image {
+      display: block;
+      width: 100%;
+      max-height: 620px;
+      object-fit: contain;
+      background: #f8faff;
+      border: 1px solid #e5eaf3;
+      border-radius: 0.65rem;
     }
 
     .fallback {
@@ -110,11 +160,54 @@
 </head>
 <body>
   <header>
-    <h1>Infographic và video</h1>
-    <p>Cùng khám phá nội dung qua infographic và video được trình bày trên một trang.</p>
+    <h1>Thông tin cá nhân</h1>
+    <p>Xin chào! Đây là trang giới thiệu thông tin và các nội dung học tập, sản phẩm của tôi.</p>
+    <div class="student-id">MSSV: B2605793</div>
   </header>
 
   <main>
+    <section aria-labelledby="profile-heading">
+      <h2 id="profile-heading">Hồ sơ cá nhân</h2>
+      <dl class="profile">
+        <div>
+          <dt>Họ và tên</dt>
+          <dd>Trần Thị Kim Anh</dd>
+        </div>
+        <div>
+          <dt>Mã số sinh viên</dt>
+          <dd>B2605793</dd>
+        </div>
+        <div>
+          <dt>Lớp học phần</dt>
+          <dd>CT005D06</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="document-heading">
+      <h2 id="document-heading">Tài liệu PDF</h2>
+      <div class="embed document">
+        <iframe
+          src="Lab05_Ex1.2.pdf"
+          title="Tài liệu PDF Lab05 Ex1.2"
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="fallback">
+        Nếu tài liệu không hiển thị,
+        <a href="Lab05_Ex1.2.pdf" target="_blank" rel="noopener noreferrer">mở hoặc tải tài liệu PDF</a>.
+      </p>
+    </section>
+
+    <section aria-labelledby="product-heading">
+      <h2 id="product-heading">Hình ảnh sản phẩm</h2>
+      <img
+        class="product-image"
+        src="Lab05_Ex2.1.png.png"
+        alt="Hình ảnh sản phẩm của bài thực hành Lab05 Ex2.1"
+        loading="lazy">
+    </section>
+
     <section aria-labelledby="infographic-heading">
       <h2 id="infographic-heading">Infographic</h2>
       <div class="embed infographic">
@@ -149,6 +242,6 @@
     </section>
   </main>
 
-  <footer>Infographic và video được nhúng từ Canva và YouTube.</footer>
+  <footer>Trang giới thiệu cá nhân của Trần Thị Kim Anh · CT005D06</footer>
 </body>
 </html>
